@@ -1,5 +1,8 @@
 # Builder stage
 FROM node:20-alpine AS builder
+# Install Python and C/C++ build tools for native modules
+RUN apk add --no-cache python3 build-base \
+    && ln -sf python3 /usr/bin/python
 WORKDIR /workspace
 
 # Copy all files and install dependencies for the Supabase package
