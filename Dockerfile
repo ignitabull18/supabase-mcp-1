@@ -3,7 +3,7 @@ FROM node:20-alpine AS builder
 WORKDIR /workspace
 
 # Copy all files and install dependencies for the Supabase package
-COPY ./packages/mcp-server-supabase/package.json ./packages/mcp-server-supabase/package-lock.json ./packages/mcp-server-supabase/tsconfig.json ./packages/mcp-server-supabase/tsup.config.ts ./
+COPY ./packages/mcp-server-supabase/package.json ./packages/mcp-server-supabase/tsconfig.json ./packages/mcp-server-supabase/tsup.config.ts ./
 COPY ./packages/mcp-server-supabase/src ./packages/mcp-server-supabase/src
 
 # Install and build in the subpackage
